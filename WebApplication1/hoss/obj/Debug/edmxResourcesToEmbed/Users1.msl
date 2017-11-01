@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UsersModel2StoreContainer" CdmEntityContainer="UsersEntities3">
+    <EntitySetMapping Name="AppointmentTables">
+      <EntityTypeMapping TypeName="UsersModel2.AppointmentTable">
+        <MappingFragment StoreEntitySet="AppointmentTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="AppointmentDate" ColumnName="AppointmentDate" />
+          <ScalarProperty Name="AppointmentTime" ColumnName="AppointmentTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoctorTables">
+      <EntityTypeMapping TypeName="UsersModel2.DoctorTable">
+        <MappingFragment StoreEntitySet="DoctorTable">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DoctorName" ColumnName="DoctorName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MsgTables">
+      <EntityTypeMapping TypeName="UsersModel2.MsgTable">
+        <MappingFragment StoreEntitySet="MsgTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+          <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+          <ScalarProperty Name="MsgText" ColumnName="MsgText" />
+          <ScalarProperty Name="MsgDate" ColumnName="MsgDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientTables">
+      <EntityTypeMapping TypeName="UsersModel2.PatientTable">
+        <MappingFragment StoreEntitySet="PatientTable">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersTables">
+      <EntityTypeMapping TypeName="UsersModel2.UsersTable">
+        <MappingFragment StoreEntitySet="UsersTable">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

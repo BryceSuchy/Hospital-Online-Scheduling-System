@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HOSS.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: xx-large;
+            text-decoration: underline;
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+        .auto-style3 {
+            background-color: #3366FF;
+        }
+        .auto-style4 {
+            width: 170px;
+            height: 202px;
+            background-color: #FFFFFF;
+        }
+        .newStyle1 {
+            background-image: url('/images/Caduceus.svg.png');
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center center;
+        }
+        .newStyle2 {
+            background-image: url('/images/Caduceus.svg.png');
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center center;
+        }
+        .auto-style5 {
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body style="background-color: #FFFFFF">
+    <form id="form1" runat="server">
+    <div>
+        <div>
+            <strong><span class="auto-style1"><em><span class="auto-style3">
+            <img class="auto-style4" src="/images/Caduceus.svg.png" /></span><span class="auto-style5">HOSPITAL ONLINE SCHEDULING SYSTEM </span> </em></span></strong>
+            <br class="auto-style5" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+        </div>
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style2">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                </td>
+                <td class="auto-style2">
+                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Doctors/DoctorsHome.aspx">Doctors Page</asp:HyperLink>
+                </td>
+                <td class="auto-style2">
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/mywork/Appointments/Appointment.aspx">Patient Page</asp:HyperLink>
+                </td>
+                <td class="auto-style2">
+                    &nbsp;</td>
+                <td class="auto-style2">
+                    &nbsp;</td>
+                <td class="auto-style2">
+                    &nbsp;</td>
+                <td class="auto-style2">
+                    <asp:LoginName ID="LoginName1" runat="server" />
+                </td>
+                <td class="auto-style2">
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsersModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AppointmentTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoctorID" Type="int" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AppointmentDate" Type="datetime" Nullable="false" />
+    <Property Name="AppointmentTime" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DoctorTable">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DoctorName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MsgTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FromUserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ToUserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MsgText" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MsgDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PatientTable">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PatientName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersTable">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AppointmentTable_DoctorTable">
+    <End Role="DoctorTable" Type="Self.DoctorTable" Multiplicity="1" />
+    <End Role="AppointmentTable" Type="Self.AppointmentTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoctorTable">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="AppointmentTable">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AppointmentTable_PatientTable">
+    <End Role="PatientTable" Type="Self.PatientTable" Multiplicity="1" />
+    <End Role="AppointmentTable" Type="Self.AppointmentTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientTable">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="AppointmentTable">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoctorTable_UsersTable">
+    <End Role="UsersTable" Type="Self.UsersTable" Multiplicity="1" />
+    <End Role="DoctorTable" Type="Self.DoctorTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsersTable">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="DoctorTable">
+        <PropertyRef Name="UserName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PatientTable_UsersTable">
+    <End Role="UsersTable" Type="Self.UsersTable" Multiplicity="1" />
+    <End Role="PatientTable" Type="Self.PatientTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UsersTable">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="PatientTable">
+        <PropertyRef Name="UserName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UsersModel2StoreContainer">
+    <EntitySet Name="AppointmentTable" EntityType="Self.AppointmentTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoctorTable" EntityType="Self.DoctorTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MsgTable" EntityType="Self.MsgTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PatientTable" EntityType="Self.PatientTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsersTable" EntityType="Self.UsersTable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AppointmentTable_DoctorTable" Association="Self.FK_AppointmentTable_DoctorTable">
+      <End Role="DoctorTable" EntitySet="DoctorTable" />
+      <End Role="AppointmentTable" EntitySet="AppointmentTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AppointmentTable_PatientTable" Association="Self.FK_AppointmentTable_PatientTable">
+      <End Role="PatientTable" EntitySet="PatientTable" />
+      <End Role="AppointmentTable" EntitySet="AppointmentTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoctorTable_UsersTable" Association="Self.FK_DoctorTable_UsersTable">
+      <End Role="UsersTable" EntitySet="UsersTable" />
+      <End Role="DoctorTable" EntitySet="DoctorTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PatientTable_UsersTable" Association="Self.FK_PatientTable_UsersTable">
+      <End Role="UsersTable" EntitySet="UsersTable" />
+      <End Role="PatientTable" EntitySet="PatientTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
