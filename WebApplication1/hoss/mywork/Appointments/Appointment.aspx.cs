@@ -38,6 +38,13 @@ namespace HOSS.mywork.Appointments
                 GridView3.DataSource = co;
                 GridView3.DataBind();
 
+                var stud = (from s in dbcont.AppointmentTables
+                            where s.AppointmentDate < DateTime.Now
+                            select s).First();
+                Console.WriteLine(stud);
+
+                dbcont.AppointmentTables.Remove(stud);
+                int num = dbcont.SaveChanges();
 
                 dbcont.MsgTables.Load();
 

@@ -28,6 +28,7 @@
     <SccProvider>SAK</SccProvider>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,7 +118,6 @@
     <Content Include="images\Caduceus.svg.png" />
     <Content Include="images\pic of docs.jpg" />
     <Content Include="mywork\Appointments\Appointment.aspx" />
-    <Content Include="mywork\PatientsHome.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -129,7 +129,6 @@
     <Content Include="Site1.Master">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="WebForm2.aspx" />
     <EntityDeploy Include="UsersModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>UsersModel.Designer.cs</LastGenOutput>
@@ -231,13 +230,6 @@
     <Compile Include="mywork\Messages.aspx.designer.cs">
       <DependentUpon>Messages.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mywork\PatientsHome.aspx.cs">
-      <DependentUpon>PatientsHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mywork\PatientsHome.aspx.designer.cs">
-      <DependentUpon>PatientsHome.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PatientTable.cs">
       <DependentUpon>UsersModel.tt</DependentUpon>
     </Compile>
@@ -297,13 +289,6 @@
     </Compile>
     <Compile Include="UsersTable.cs">
       <DependentUpon>UsersModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

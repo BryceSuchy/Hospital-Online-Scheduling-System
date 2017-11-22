@@ -53,8 +53,8 @@ namespace HOSS
                 msg.ToUserName = DropDownList1.Text;
                 msg.MsgDate = DateTime.Now;
                 msg.MsgText = msgTextbox.Text;
-                msg.FromUserName = HttpContext.Current.User.Identity.Name.ToString();                   
-                
+                msg.FromUserName = HttpContext.Current.User.Identity.Name.ToString();
+
                 // add data to the dbcon
 
                 dbcon.MsgTables.Add(msg);
@@ -68,5 +68,15 @@ namespace HOSS
         {
 
         }
+
+        protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
+        {
+            
+        }
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            
+        }
     }
-}
+    }
+    }
