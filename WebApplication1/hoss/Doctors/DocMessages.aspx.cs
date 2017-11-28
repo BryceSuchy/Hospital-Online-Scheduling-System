@@ -36,7 +36,9 @@ namespace HOSS.Doctors
             }
             catch
             {
-                Response.Redirect("~/mywork/Messages.aspx");
+                Response.Write(" <script>alert(' Wrong page docmeesssa -- not valid user') </script>");
+
+                Response.Redirect("~/mywork/Appointments/Appointment.aspx");
             }
         }
 

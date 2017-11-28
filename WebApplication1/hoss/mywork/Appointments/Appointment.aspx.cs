@@ -11,7 +11,7 @@ namespace HOSS.mywork.Appointments
 {
     public partial class Appointment : System.Web.UI.Page
     {
-
+        bool check = true;
         UsersEntities3 dbcont = new UsersEntities3();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,6 +25,10 @@ namespace HOSS.mywork.Appointments
                 PatientTable patient = (from x in dbcont.PatientTables.Local
                                         where (x.UserName.Equals(username))
                                         select x).First();
+                if (patient == null)
+                {
+                    check = false;
+                }
 
                 string pID = patient.PatientID.ToString();
 
@@ -38,7 +42,7 @@ namespace HOSS.mywork.Appointments
                 GridView3.DataSource = co;
                 GridView3.DataBind();
 
-                var stud = (from s in dbcont.AppointmentTables
+                var stud = (from s in dbcont.AppointmentTables.Local
                             where s.AppointmentDate < DateTime.Now
                             select s).First();
                 Console.WriteLine(stud);
@@ -57,8 +61,14 @@ namespace HOSS.mywork.Appointments
             }
             catch
             {
-                Response.Write("<script>alert(' Wrong page -- not valid user') </script>");
-               // Response.Redirect("~/mywork/Appointments/Appointment.aspx");
+                Response.Write(" <script>alert(' Wrong page patient -- not valid user') </script>");
+                //if not a patient it redirects to the doctors home page 
+                if (check)
+                {
+                    Response.Write(" <script>alert(' Wrong page patient -- not valid user') </script>");
+                    Response.Redirect("~/Doctors/DoctorsHome.aspx");
+                }
+            
             }
 
         }
