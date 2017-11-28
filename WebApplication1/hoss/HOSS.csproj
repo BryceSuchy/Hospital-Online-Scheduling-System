@@ -117,6 +117,7 @@
     <Content Include="Doctors\DoctorsHome.aspx" />
     <Content Include="images\Caduceus.svg.png" />
     <Content Include="images\pic of docs.jpg" />
+    <Content Include="mywork\Account.aspx" />
     <Content Include="mywork\Appointments\Appointment.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -163,7 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="mywork\MedReport.aspx" />
     <Content Include="mywork\Messages.aspx" />
     <Content Include="UsersModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -209,19 +209,19 @@
     <Compile Include="MsgTable.cs">
       <DependentUpon>UsersModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="mywork\Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mywork\Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mywork\Appointments\Appointment.aspx.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="mywork\Appointments\Appointment.aspx.designer.cs">
       <DependentUpon>Appointment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mywork\MedReport.aspx.cs">
-      <DependentUpon>MedReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="mywork\MedReport.aspx.designer.cs">
-      <DependentUpon>MedReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="mywork\Messages.aspx.cs">
       <DependentUpon>Messages.aspx</DependentUpon>

@@ -58,7 +58,7 @@ namespace HOSS.mywork.Appointments
             catch
             {
                 Response.Write("<script>alert(' Wrong page -- not valid user') </script>");
-               // Response.Redirect("~/mywork/Appointments/Appointment.aspx");
+                //Server.Transfer("~/Doctors/DoctorsHome.aspx");
             }
 
         }

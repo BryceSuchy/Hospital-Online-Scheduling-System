@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
+    "",
     "\\WebApplication1",
-    "\\WebApplication1\\hoss"
+    "\\WebApplication1\\hoss",
+    "\\WebApplication1\\hoss\\mywork"
   ],
+  "SelectedNode": "\\WebApplication1\\hoss\\Users1.edmx",
   "PreviewInSolutionExplorer": false
 }

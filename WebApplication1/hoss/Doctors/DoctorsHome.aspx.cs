@@ -59,6 +59,7 @@ namespace HOSS.Doctors
             catch
             {
                 Response.Write("<script>alert(' Wrong page -- not valid user') </script>");
+                //Server.Transfer("~/mywork/Appointments/Appointment.aspx");
             }
         }
 

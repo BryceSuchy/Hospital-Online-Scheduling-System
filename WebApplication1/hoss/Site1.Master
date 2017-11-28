@@ -71,6 +71,9 @@
                     <asp:LoginName ID="LoginName1" runat="server" />
                 </td>
                 <td class="auto-style2">
+                    <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/mywork/Account.aspx">Account</asp:HyperLink>
+                </td>
+                <td>
                     <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
                 </td>
             </tr>
