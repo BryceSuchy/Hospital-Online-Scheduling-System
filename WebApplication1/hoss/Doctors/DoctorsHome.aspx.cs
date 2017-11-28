@@ -37,29 +37,30 @@ namespace HOSS.Doctors
 
                 dbcont.AppointmentTables.Load();
 
-                var co = from x in dbcont.AppointmentTables.Local
-                         where x.DoctorID.Equals(Convert.ToInt32(pID))
-                         select x;
+                var doctorsAppointments =   from x in dbcont.AppointmentTables.Local
+                                            where x.DoctorID.Equals(Convert.ToInt32(pID))
+                                            select x;
 
-                GridView4.DataSource = co;
+                GridView4.DataSource = doctorsAppointments;
                 GridView4.DataBind();
 
 
                 dbcont.MsgTables.Load();
 
-                var ro = from x in dbcont.MsgTables.Local
-                         where x.ToUserName.Equals(username)
-                         select x;
+                var doctorsMessages =   from x in dbcont.MsgTables.Local
+                                        where x.ToUserName.Equals(username)
+                                        select x;
 
 
-                GridView5.DataSource = ro;
+                GridView5.DataSource = doctorsMessages;
                 GridView5.DataBind();
 
             }
             catch
             {
-                Response.Write("<script>alert(' Wrong page -- not valid user') </script>");
-                //Server.Transfer("~/mywork/Appointments/Appointment.aspx");
+                Response.Write("<script>alert('Wrong page? -- not valid user') </script>");
+                Response.Redirect("~/mywork/Appointments/Appointment.aspx");
+
             }
         }
 

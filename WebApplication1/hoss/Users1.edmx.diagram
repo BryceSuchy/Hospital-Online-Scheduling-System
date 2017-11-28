@@ -7,7 +7,7 @@
       <Diagram DiagramId="6bb7478cfc3648409f781395c10542db" Name="Diagram1">
         <EntityTypeShape EntityType="UsersModel2.AppointmentTable" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="UsersModel2.DoctorTable" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="UsersModel2.MsgTable" Width="1.5" PointX="7.875" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UsersModel2.MsgTable" Width="1.875" PointX="7.5" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="UsersModel2.PatientTable" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="UsersModel2.UsersTable" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
         <AssociationConnector Association="UsersModel2.FK_AppointmentTable_DoctorTable" ManuallyRouted="false" />

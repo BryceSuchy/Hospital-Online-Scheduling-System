@@ -37,8 +37,8 @@ namespace HOSS
                 GridView1.DataBind();
             }
             catch
-            {
-                Response.Redirect("~/Doctors/DocMessages.aspx");
+            { 
+                Response.Redirect("~/Messages.aspx");
             }
 
         }
