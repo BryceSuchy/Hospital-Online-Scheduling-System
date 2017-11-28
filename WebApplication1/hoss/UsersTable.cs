@@ -24,6 +24,9 @@ namespace HOSS
         public string UserName { get; set; }
         public string Password { get; set; }
         public string UserType { get; set; }
+        public Nullable<int> SSN { get; set; }
+        public Nullable<int> Phone { get; set; }
+        public string Address { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DoctorTable> DoctorTables { get; set; }

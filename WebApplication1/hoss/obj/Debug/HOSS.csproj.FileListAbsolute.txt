@@ -116,6 +116,5 @@ C:\Users\bryce\Source\Repos\Hospital-Online-Scheduling-System\WebApplication1\HO
 \\Mac\Home\Desktop\DBMS-project\WebApplication1\HOSS\bin\Microsoft.AI.WindowsServer.xml
 \\Mac\Home\Desktop\DBMS-project\WebApplication1\HOSS\bin\Microsoft.ApplicationInsights.xml
 \\Mac\Home\Desktop\DBMS-project\WebApplication1\HOSS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-\\Mac\Home\Desktop\DBMS-project\WebApplication1\HOSS\obj\Debug\HOSS.csprojResolveAssemblyReference.cache
 \\Mac\Home\Desktop\DBMS-project\WebApplication1\HOSS\obj\Debug\HOSS.dll
 \\Mac\Home\Desktop\DBMS-project\WebApplication1\HOSS\obj\Debug\HOSS.pdb

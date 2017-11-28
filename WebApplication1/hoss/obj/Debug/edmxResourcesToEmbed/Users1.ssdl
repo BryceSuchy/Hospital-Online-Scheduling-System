@@ -8,7 +8,7 @@
     <Property Name="DoctorID" Type="int" Nullable="false" />
     <Property Name="PatientID" Type="int" Nullable="false" />
     <Property Name="Reason" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="AppointmentDate" Type="datetime" Nullable="false" />
+    <Property Name="AppointmentDate" Type="date" Nullable="false" />
     <Property Name="AppointmentTime" Type="time" Precision="7" Nullable="false" />
   </EntityType>
   <EntityType Name="DoctorTable">
@@ -48,6 +48,9 @@
     <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="UserType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SSN" Type="int" />
+    <Property Name="Phone" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_AppointmentTable_DoctorTable">
     <End Role="DoctorTable" Type="Self.DoctorTable" Multiplicity="1" />

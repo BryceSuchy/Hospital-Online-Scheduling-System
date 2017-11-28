@@ -61,13 +61,6 @@ namespace HOSS.mywork.Appointments
             }
             catch
             {
-                Response.Write(" <script>alert(' Wrong page patient -- not valid user') </script>");
-                //if not a patient it redirects to the doctors home page 
-                if (check)
-                {
-                    Response.Write(" <script>alert(' Wrong page patient -- not valid user') </script>");
-                    Response.Redirect("~/Doctors/DoctorsHome.aspx");
-                }
             
             }
 

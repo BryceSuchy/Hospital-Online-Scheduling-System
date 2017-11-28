@@ -14,6 +14,7 @@ namespace HOSS.Doctors
     public partial class DoctorsHome : System.Web.UI.Page
     {
         UsersEntities3 dbcont = new UsersEntities3();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (TextBox1.Text.Length > 0)
@@ -57,9 +58,7 @@ namespace HOSS.Doctors
 
             }
             catch
-            {
-                Response.Write("<script>alert('Wrong page? -- not valid user') </script>");
-                Response.Redirect("~/mywork/Appointments/Appointment.aspx");
+            { 
 
             }
         }
